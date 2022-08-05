@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="card-body">
+        <h1>This is some text from the child</h1>
+        <hr>
+        value from parent {{parentValue}}
+
+        <hr>
+        <input type="text" [(ngModel)] = 'childTextValue'>
+        <button (click)="passData()">send data</button>
+
+    </div>
+</div>
