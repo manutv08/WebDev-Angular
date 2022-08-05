@@ -1,0 +1,51 @@
+<h1>structural directives</h1>
+<h3>*ngIf</h3>
+<h3>*ngFor</h3>
+<h3>*ngSwitch</h3>
+<h4>used to add or remove elements from DOM</h4>
+
+
+<!-- <h2 *ngIf="displayname; else elseBlock">Expertz lab</h2>
+<ng-template #elseBlock>
+    <h2>name is hidden</h2>
+</ng-template> -->
+
+<!-- <div *ngIf="displayname; then trueBlock; else elseBlock "></div>
+
+<ng-template #trueBlock>
+Expertz
+</ng-template>
+<ng-template #elseBlock>
+    no name
+</ng-template> -->
+
+
+<!-- <div [ngSwitch]="personName">
+    <div *ngSwitchCase="'Anurag'">You selected Anurag</div>
+    <div *ngSwitchCase="'Manu'">You selected Manu </div>
+    <div *ngSwitchCase="'Ajesh'">You selected Ajesh</div>
+    <div *ngSwitchDefault>pick another name</div>
+</div> -->
+
+<!-- <div *ngFor = "let person of persons; first as i">
+<div *ngFor = "let person of persons; last as i"> --> -->
+<!-- <div *ngFor = "let person of persons; odd as i">
+<div *ngFor = "let person of persons; even as i"> -->
+<div *ngFor = "let person of persons; index as i">
+{{person}} {{i}}
+</div>
+
+<ul *ngFor="let person of persons">
+    <li *ngIf="person.gender==='male'">
+        {{person.name}} {{person.gender}}
+    </li>
+</ul>
+
+<select #student (change)="onSelect($event)">
+    <option value="default">---</option>
+    <option *ngFor="let student of students">
+        {{student}}
+    </option>
+</select>
+
+<p>you selected {{selected}}</p>

@@ -1,7 +1,10 @@
 <h1>Property binding</h1>
 <!-- <input type="text" [value]="studentname"> -->
-<input type="text" [id]="myId" value="Hello">
-<img [src]="image" alt="" width="200px" (click)="onClick()">
+<input type="text" [id]="myId" #mvalue>
+
+<button (click)="logMessage(mvalue.value)">log</button>
+
+<img [src]="image" alt="" width="200px" (click)="onClick($event)">
 
 <h1>Class binding</h1>
 
@@ -15,6 +18,11 @@
 <h1 [ngStyle]="titleStyles">Style Binding</h1>
 <h1 [ngStyle]="{fontStyle: 'italic', color:'green'}">Style Binding</h1>
 
+<h1>Template Reference Variable</h1>
 
+<h2>two way binding</h2>
+
+<input type="text" [(ngModel)]="studentname">
+{{studentname}}
 
 

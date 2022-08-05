@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
   public title:string = 'My App';
-  public studentname:string = "Manu"
+  public studentname:string = ""
   public myId:string ="mynewId"
 
   public image:string="https://media.istockphoto.com/photos/red-apple-picture-id184276818?k=20&m=184276818&s=612x612&w=0&h=QxOcueqAUVTdiJ7DVoCu-BkNCIuwliPEgtAQhgvBA_g="
@@ -20,7 +20,8 @@ export class TestComponent implements OnInit {
 
   fruit:boolean = true
 
-  onClick(){
+  onClick(e:any){
+    console.log(e.type);
     this.fruit = !this.fruit
     if(this.fruit){
       this.image = "https://media.istockphoto.com/photos/red-apple-picture-id184276818?k=20&m=184276818&s=612x612&w=0&h=QxOcueqAUVTdiJ7DVoCu-BkNCIuwliPEgtAQhgvBA_g="
@@ -53,4 +54,8 @@ export class TestComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logMessage(message:string){
+    console.log(message);
+    
+  }
 }
